@@ -20,6 +20,7 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 var app = express();
 
 app.use(logger("dev"));
+app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
